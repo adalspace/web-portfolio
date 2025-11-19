@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Amir Adal – Software Engineer & Full-Stack Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Fonts: Inter + Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link href="/dist/styles.css" rel="stylesheet" /> -->
+  </head>
+  <body
+    class="bg-bg-dark bg-slate-950 text-slate-100 min-h-screen font-sans antialiased relative"
+  >
+    <!-- Background gradient + subtle glow -->
+    <div
+      class="pointer-events-none fixed inset-0 opacity-60"
+      aria-hidden="true"
+    >
+      <div
+        class="absolute -top-40 -left-40 h-80 w-80 rounded-full bg-primary/30 blur-3xl"
+      ></div>
+      <div
+        class="absolute top-1/3 -right-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-0 left-1/4 h-72 w-72 rounded-full bg-primary/10 blur-3xl"
+      ></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header
+      class="fixed top-0 left-0 right-0 z-40 border-b border-slate-800/60 bg-bg-dark/70 backdrop-blur-lg"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3"
+      >
+        <a href="#top" class="flex items-center gap-2">
+          <div
+            class="relative flex h-8 w-8 items-center justify-center rounded-xl bg-slate-900/80"
+          >
+            <!-- Simple code icon -->
+            <svg
+              class="h-4 w-4 text-primary"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+            <span
+              class="pointer-events-none absolute inset-0 rounded-xl border border-primary/40 animate-border-spin"
+            ></span>
+          </div>
+          <span class="text-sm font-medium text-slate-200">Amir&nbsp;Adal</span>
+        </a>
+
+        <div class="hidden items-center gap-6 text-xs font-medium md:flex">
+          <a href="#about" class="text-slate-300 hover:text-primary">About</a>
+          <a href="#skills" class="text-slate-300 hover:text-primary">Skills</a>
+          <a href="#experience" class="text-slate-300 hover:text-primary"
+            >Experience</a
+          >
+          <a href="#projects" class="text-slate-300 hover:text-primary"
+            >Projects</a
+          >
+          <a href="#education" class="text-slate-300 hover:text-primary"
+            >Education</a
+          >
+          <a href="#contact" class="text-slate-300 hover:text-primary"
+            >Contact</a
+          >
+        </div>
+
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-1.5 rounded-full border border-primary/70 px-3 py-1.5 text-[0.7rem] font-semibold uppercase tracking-wide text-primary shadow-glow hover:bg-primary/10"
+        >
+          <svg
+            class="h-3 w-3"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M22 4.5V19.5C22 20.3284 21.3284 21 20.5 21H3.5C2.67157 21 2 20.3284 2 19.5V4.5"
+            />
+            <path
+              d="M2 5L10.5858 12.2929C11.3668 12.9497 12.6332 12.9497 13.4142 12.2929L22 5"
+            />
+          </svg>
+          <span>Let’s talk</span>
+        </a>
+      </nav>
+    </header>
+
+    <main id="top" class="mx-auto max-w-6xl px-4 pt-24 pb-16 space-y-24">
+      <!-- HERO / LANDING -->
+      <section
+        id="hero"
+        class="relative flex flex-col items-start gap-10 pt-10 md:flex-row md:items-center"
+      >
+        <div
+          class="relative flex-1 opacity-0 translate-y-6 transition-all duration-700"
+          data-hero
+        >
+          <p
+            class="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-primary/80"
+          >
+            Software Engineer · Full-Stack Developer
+          </p>
+          <h1
+            class="mb-4 font-heading text-3xl font-semibold leading-tight tracking-tight text-slate-50 md:text-4xl lg:text-5xl"
+          >
+            Building reliable systems,
+            <span class="text-primary">from pixel to kernel</span>.
+          </h1>
+          <p class="mb-6 max-w-xl text-sm text-slate-300 md:text-base">
+            I’m <span class="font-semibold text-slate-100">Amir Adal</span>, a
+            full-stack engineer who lives in both worlds:
+            <span class="text-slate-100">modern web apps</span> (React, Vite,
+            Svelte) and <span class="text-slate-100">low-level systems</span>
+            (C++, Rust, Linux, Wayland). I care about performance, clean
+            architecture, and shipping real products end-to-end.
+          </p>
+
+          <!-- Small icon badges row -->
+          <div class="mb-4 flex flex-wrap gap-2 text-[0.7rem]">
+            <span
+              class="inline-flex items-center gap-1 rounded-full bg-slate-900/80 px-2.5 py-1 text-slate-200 border border-slate-800"
+            >
+              <svg
+                class="h-3 w-3 text-primary"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <path d="M8 9h8" />
+                <path d="M8 13h5" />
+              </svg>
+              <span>Full-stack web</span>
+            </span>
+            <span
+              class="inline-flex items-center gap-1 rounded-full bg-slate-900/80 px-2.5 py-1 text-slate-200 border border-slate-800"
+            >
+              <svg
+                class="h-3 w-3 text-primary"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M19.4 15A1.65 1.65 0 0 0 21 13.35 2 2 0 0 0 19 11.5a1.65 1.65 0 0 0-1.4-.75"
+                />
+                <path
+                  d="M4.6 9A1.65 1.65 0 0 0 3 10.65 2 2 0 0 0 5 12.5a1.65 1.65 0 0 0 1.4.75"
+                />
+              </svg>
+              <span>Systems & Linux</span>
+            </span>
+            <span
+              class="inline-flex items-center gap-1 rounded-full bg-slate-900/80 px-2.5 py-1 text-slate-200 border border-slate-800"
+            >
+              <svg
+                class="h-3 w-3 text-primary"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 4H20V20H4z" />
+                <path d="M4 9H20" />
+                <path d="M9 4V20" />
+              </svg>
+              <span>Teaching & mentoring</span>
+            </span>
+          </div>
+
+          <div class="mb-6 flex flex-wrap items-center gap-3">
+            <a
+              href="#projects"
+              class="group inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-slate-950 shadow-glow transition hover:bg-primary/90"
+            >
+              View projects
+              <span
+                class="inline-block transition-transform group-hover:translate-x-0.5"
+                >→</span
+              >
+            </a>
+            <a
+              href="#experience"
+              class="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-950/60 px-4 py-2 text-xs font-medium text-slate-200 hover:border-primary/70 hover:text-primary"
+            >
+              <svg
+                class="h-3.5 w-3.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>Experience timeline</span>
+            </a>
+          </div>
+
+          <dl
+            class="grid max-w-lg grid-cols-2 gap-3 text-xs text-slate-300 md:text-sm"
+          >
+            <div>
+              <dt class="font-semibold text-slate-100">Location</dt>
+              <dd>Saxony-Anhalt, Germany</dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-slate-100">Role</dt>
+              <dd>Software Engineer & Full-Stack Developer</dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-slate-100">Email</dt>
+              <dd>
+                <a
+                  href="mailto:adal.amir07@gmail.com"
+                  class="hover:text-primary"
+                  >adal.amir07@gmail.com</a
+                >
+              </dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-slate-100">Mobile</dt>
+              <dd>+49&nbsp;173&nbsp;3942115</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- HERO SIDE CARD -->
+        <div
+          class="relative mt-6 flex-1 md:mt-0 md:max-w-sm opacity-0 translate-y-6 transition-all duration-700 delay-150"
+          data-hero
+        >
+          <div
+            class="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950/80 p-5 shadow-xl shadow-slate-950/70 hover:shadow-glow hover:-translate-y-1 transition-transform duration-300"
+          >
+            <div
+              class="pointer-events-none absolute inset-0 rounded-3xl border border-primary/40 opacity-60"
+            ></div>
+            <div
+              class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary/25 blur-2xl"
+            ></div>
+
+            <!-- PROFILE PICTURE -->
+            <div class="mb-4 flex items-center gap-3">
+              <div
+                class="relative h-20 w-20 rounded-full overflow-hidden border-2 border-primary/70 shadow-glow"
+              >
+                <img
+                  src="./images/profile.jpg"
+                  alt="Portrait of Amir Adal"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <div>
+                <p class="text-sm font-heading font-semibold text-slate-100">
+                  Amir Adal
+                </p>
+                <p class="text-xs text-slate-400">
+                  Software Engineer · Full-Stack Developer
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-3 mb-3">
+              <h2 class="text-sm font-heading font-semibold text-slate-100">
+                Basic Info
+              </h2>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-slate-900/80 px-2 py-1 text-[0.65rem] uppercase tracking-wide text-primary border border-slate-700"
+              >
+                <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                Available for work
+              </span>
+            </div>
+
+            <dl class="space-y-2 text-xs text-slate-300">
+              <div class="flex justify-between gap-4">
+                <dt class="text-slate-400">Full Name</dt>
+                <dd class="font-medium text-slate-100 text-right">
+                  Amir&nbsp;Adal
+                </dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-slate-400">Date of Birth</dt>
+                <dd class="text-right">11.07.2005</dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-slate-400">Address</dt>
+                <dd class="max-w-44 text-right">
+                  Meseberger Str. 5, 39326 Wolmirstedt, Germany
+                </dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-slate-400">Nationality</dt>
+                <dd class="text-right">russian, syrian</dd>
+              </div>
+            </dl>
+
+            <div class="mt-5 border-t border-slate-800 pt-4">
+              <p class="mb-1 text-xs uppercase tracking-wide text-slate-400">
+                Actively working with
+              </p>
+              <p class="text-xs text-slate-200">
+                TypeScript · JavaScript · Go · C++ · Rust · React · Svelte ·
+                Linux · PostgreSQL
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="space-y-6" data-animate>
+        <div class="flex items-center justify-between gap-4">
+          <h2
+            class="font-heading text-xl font-semibold text-slate-50 md:text-2xl"
+          >
+            About
+          </h2>
+          <span
+            class="h-px flex-1 bg-linear-to-r from-primary/60 to-transparent"
+          ></span>
+        </div>
+
+        <div
+          class="grid gap-6 md:grid-cols-[2fr,1.3fr] lg:grid-cols-[2fr,1.2fr]"
+        >
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-950/70 p-5 text-sm leading-relaxed text-slate-200 hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <p class="mb-3">
+              I’m a <span class="font-semibold">software engineer</span> and
+              <span class="font-semibold">full-stack developer</span> who enjoys
+              moving between high-level product work and low-level system
+              details. I’ve built everything from CRM frontends and mobile apps
+              to custom programming languages and 3D engines in C++.
+            </p>
+            <p class="mb-3">
+              My thing is combining
+              <span class="text-slate-100">solid engineering</span> with
+              <span class="text-slate-100">clean UX</span>: carefully designed
+              APIs, stable infrastructure, and interfaces that feel fast and
+              intentional.
+            </p>
+            <p>
+              Outside of coding, I recharge with
+              <span class="text-slate-100"
+                >football, volleyball, table tennis</span
+              >
+              and long city or off-city rides on my bicycle.
+            </p>
+          </div>
+
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-950/70 p-5 text-xs text-slate-200 md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
+              Quick Highlights
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2">
+                <svg
+                  class="mt-0.5 h-3.5 w-3.5 text-primary shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 20l9-16H3z" />
+                </svg>
+                <span
+                  >Comfortable across
+                  <span class="text-slate-100"
+                    >frontend, backend & system programming</span
+                  >.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="mt-0.5 h-3.5 w-3.5 text-primary shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M19 12h2" />
+                  <path d="M3 12h2" />
+                  <path d="M12 5V3" />
+                  <path d="M12 21v-2" />
+                </svg>
+                <span
+                  >Experience with
+                  <span class="text-slate-100"
+                    >Wayland, wlroots, custom Linux setups</span
+                  >
+                  and deployment.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="mt-0.5 h-3.5 w-3.5 text-primary shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M8 6H21V18H8z" />
+                  <path d="M3 6H5V18H3z" />
+                </svg>
+                <span
+                  >Built and shipped
+                  <span class="text-slate-100">real products</span>: CRM
+                  modules, educational platforms, mini-apps and tooling.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="mt-0.5 h-3.5 w-3.5 text-primary shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 20v-6" />
+                  <path d="M6 20v-4" />
+                  <path d="M18 20v-8" />
+                  <path d="M4 4h16" />
+                </svg>
+                <span
+                  >Strong focus on
+                  <span class="text-slate-100"
+                    >documentation reading, new tech adoption</span
+                  >, and teaching others.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="space-y-6" data-animate>
+        <div class="flex items-center justify-between gap-4">
+          <h2
+            class="font-heading text-xl font-semibold text-slate-50 md:text-2xl"
+          >
+            Skills & Stack
+          </h2>
+          <span
+            class="h-px flex-1 bg-linear-to-r from-primary/60 via-primary/20 to-transparent"
+          ></span>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <!-- Core Skills -->
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <div class="flex items-center gap-2 mb-3">
+              <div
+                class="flex h-7 w-7 items-center justify-center rounded-full bg-slate-900 border border-slate-700"
+              >
+                <svg
+                  class="h-3.5 w-3.5 text-primary"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <h3 class="text-sm font-heading font-semibold text-slate-100">
+                Core & Professional
+              </h3>
+            </div>
+            <dl class="space-y-2">
+              <div>
+                <dt class="text-slate-400">Main skill & hobby</dt>
+                <dd class="text-slate-200">
+                  Coding · Software Architecture · System Design
+                </dd>
+              </div>
+              <div>
+                <dt class="text-slate-400">Mindset</dt>
+                <dd class="text-slate-200">
+                  Documentation-driven, curious, self-taught, comfortable
+                  learning new tech quickly.
+                </dd>
+              </div>
+              <div>
+                <dt class="text-slate-400">Teaching</dt>
+                <dd class="text-slate-200">
+                  Programming & robotics tutor for kids (11–19 years), focusing
+                  on foundations, problem solving and fun projects.
+                </dd>
+              </div>
+              <div>
+                <dt class="text-slate-400">Soft skills</dt>
+                <dd class="text-slate-200">
+                  Cross-team collaboration, mentoring, ownership of codebases,
+                  clear communication across cultures.
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Lifestyle / Sports -->
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <div class="flex items-center gap-2 mb-3">
+              <div
+                class="flex h-7 w-7 items-center justify-center rounded-full bg-slate-900 border border-slate-700"
+              >
+                <svg
+                  class="h-3.5 w-3.5 text-primary"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="5" r="2" />
+                  <path d="M12 7v5l-2 4" />
+                  <path d="M9 18h3" />
+                  <path d="M16 11l2 4" />
+                  <path d="M19 18h-3" />
+                </svg>
+              </div>
+              <h3 class="text-sm font-heading font-semibold text-slate-100">
+                Outside of Code
+              </h3>
+            </div>
+            <ul class="space-y-2 text-slate-200">
+              <li>
+                <span class="font-semibold text-slate-100">Sports:</span>
+                Football, volleyball, table tennis.
+              </li>
+              <li>
+                <span class="font-semibold text-slate-100">Cycling:</span>
+                Riding in and outside the city to reset and think.
+              </li>
+              <li>
+                <span class="font-semibold text-slate-100">Learning:</span>
+                Regularly reading official docs, RFCs, and deep-dives to stay
+                sharp.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tech Stack Grids -->
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Languages -->
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
+              Programming Languages
+            </h3>
+            <ul class="space-y-1 text-slate-200">
+              <li>
+                <span class="font-semibold text-slate-100">Web:</span>
+                TypeScript, JavaScript, Go, HTML, CSS, PHP, a bit of Python,
+                Node.js
+              </li>
+              <li>
+                <span class="font-semibold text-slate-100">System:</span>
+                C++, C, Rust, Python
+              </li>
+            </ul>
+          </div>
+
+          <!-- Frameworks -->
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
+              Frameworks & Tooling
+            </h3>
+            <ul class="space-y-1 text-slate-200">
+              <li>React + Vite</li>
+              <li>Svelte + Vite</li>
+              <li>Native Webpack setups</li>
+              <li>Gulp pipelines</li>
+              <li>Raw HTML/CSS/JavaScript projects</li>
+              <li>Tauri (Rust + React) for desktop apps</li>
+            </ul>
+          </div>
+
+          <!-- Linux / DevOps -->
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
+              Linux & DevOps
+            </h3>
+            <ul class="space-y-1 text-slate-200">
+              <li>Linux filesystem & distro usage (desktop & server)</li>
+              <li>Ubuntu Server, custom Wayland clients, wlroots</li>
+              <li>Bash scripting, deep distro customization</li>
+              <li>
+                Nginx / Apache2 with custom network configs & security
+                considerations
+              </li>
+              <li>
+                Redis, RabbitMQ, PostgreSQL, MongoDB, SQLite3, MinIO blob
+                storage, Apache Kafka
+              </li>
+            </ul>
+          </div>
+
+          <!-- CI/CD -->
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
+              CI / CD & Infra
+            </h3>
+            <ul class="space-y-1 text-slate-200">
+              <li>Git & GitHub workflows</li>
+              <li>Docker & Portainer</li>
+              <li>Kubernetes (K8s) basics</li>
+            </ul>
+          </div>
+
+          <!-- Productivity -->
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
+              Productivity & Office
+            </h3>
+            <ul class="space-y-1 text-slate-200">
+              <li>Advanced Microsoft Word, Excel, PowerPoint</li>
+              <li>Documentation, reporting, and technical slides</li>
+            </ul>
+          </div>
+
+          <!-- Languages -->
+          <div
+            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
+              Spoken Languages
+            </h3>
+            <ul class="space-y-1 text-slate-200">
+              <li>Russian – Native</li>
+              <li>German – Advanced (C1, job-oriented telc certificate)</li>
+              <li>English – Advanced</li>
+              <li>Spanish – Basics</li>
+              <li>Turkish – Basics + good understanding</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="space-y-6" data-animate>
+        <div class="flex items-center justify-between gap-4">
+          <h2
+            class="font-heading text-xl font-semibold text-slate-50 md:text-2xl"
+          >
+            Work Experience
+          </h2>
+          <span
+            class="h-px flex-1 bg-linear-to-r from-primary/60 via-primary/20 to-transparent"
+          ></span>
+        </div>
+
+        <div class="space-y-5">
+          <!-- Cobold Digital -->
+          <article
+            class="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <div
+              class="pointer-events-none absolute inset-0 bg-linear-to-r from-primary/10 via-transparent to-transparent opacity-70"
+            ></div>
+            <div
+              class="relative flex flex-col gap-2 md:flex-row md:items-start"
+            >
+              <div class="md:flex-1">
+                <div class="flex items-center gap-2">
+                  <svg
+                    class="h-4 w-4 text-primary shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <path d="M3 10h18" />
+                  </svg>
+                  <h3 class="text-sm font-heading font-semibold text-slate-100">
+                    Software Engineer · Cobold Digital
+                  </h3>
+                </div>
+                <p class="text-xs text-primary mt-0.5">
+                  2021 – 2022 · New Delhi, India (remote)
+                </p>
+                <p class="mt-2 text-slate-200">
+                  Implemented and maintained frontend modules for a CRM product
+                  built around the modern WhatsApp Cloud API, collaborating
+                  closely with cross-functional teams.
+                </p>
+              </div>
+            </div>
+            <ul class="relative mt-3 space-y-1 text-slate-200">
+              <li>
+                • Built modular frontend components for CRM workflows and
+                messaging features.
+              </li>
+              <li>
+                • Collaborated with backend engineers, occasionally contributing
+                to backend development.
+              </li>
+              <li>
+                • Took strong ownership over a React Native mobile app and its
+                codebase, ensuring stability and feature delivery.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Mental arithmetic platform -->
+          <article
+            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                class="h-4 w-4 text-primary shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="4" width="18" height="16" rx="2" />
+                <path d="M7 9h10" />
+                <path d="M7 13h6" />
+              </svg>
+              <h3 class="text-sm font-heading font-semibold text-slate-100">
+                Full-Stack Developer · Educational Platform (Mental Arithmetics)
+              </h3>
+            </div>
+            <p class="text-xs text-primary mt-0.5">2020 – ~2022</p>
+            <p class="mt-2 text-slate-200">
+              Developed a full educational platform for kids learning mental
+              arithmetic, taking responsibility for the entire product as a solo
+              full-stack developer.
+            </p>
+            <ul class="mt-3 space-y-1 text-slate-200">
+              <li>
+                • Designed and implemented frontend, backend, and data models.
+              </li>
+              <li>
+                • Focused on usability for children and instructors with
+                intuitive interfaces.
+              </li>
+              <li>
+                • Managed deployment, performance, and ongoing improvements.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="space-y-6" data-animate>
+        <div class="flex items-center justify-between gap-4">
+          <h2
+            class="font-heading text-xl font-semibold text-slate-50 md:text-2xl"
+          >
+            Selected Projects
+          </h2>
+          <span
+            class="h-px flex-1 bg-linear-to-r from-primary/60 via-primary/20 to-transparent"
+          ></span>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2">
+          <!-- tmpl language -->
+          <article
+            class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <div
+              class="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"
+            ></div>
+            <div class="relative flex items-center gap-2 mb-1">
+              <svg
+                class="h-4 w-4 text-primary shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M16 18l6-6-6-6" />
+                <path d="M8 6l-6 6 6 6" />
+              </svg>
+              <h3 class="text-sm font-heading font-semibold text-slate-100">
+                tmpl – Custom Programming / Scripting Language
+              </h3>
+            </div>
+            <p
+              class="relative mb-2 text-[0.7rem] uppercase tracking-wide text-primary/80"
+            >
+              C++ · CMake · Native C-modules
+            </p>
+            <p class="relative text-slate-200">
+              Designed and implemented a custom programming/scripting language
+              in C++ with native module support similar to CPython or Node.js
+              addons, including CMake build configuration.
+            </p>
+          </article>
+
+          <!-- Chrome extension -->
+          <article
+            class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <div
+              class="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"
+            ></div>
+            <div class="relative flex items-center gap-2 mb-1">
+              <svg
+                class="h-4 w-4 text-primary shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M8 9h8" />
+              </svg>
+              <h3 class="text-sm font-heading font-semibold text-slate-100">
+                WhatsApp Chrome Extension – Groups & Chats Extractor
+              </h3>
+            </div>
+            <p
+              class="relative mb-2 text-[0.7rem] uppercase tracking-wide text-primary/80"
+            >
+              JavaScript · Browser APIs
+            </p>
+            <p class="relative text-slate-200">
+              Built a Chrome extension that can extract and process WhatsApp
+              group, contact, and chat data from the browser, enabling advanced
+              workflows and integrations.
+            </p>
+          </article>
+
+          <!-- Tauri gallery app -->
+          <article
+            class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <div
+              class="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"
+            ></div>
+            <div class="relative flex items-center gap-2 mb-1">
+              <svg
+                class="h-4 w-4 text-primary shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="4" width="18" height="14" rx="2" />
+                <circle cx="8.5" cy="11" r="2" />
+                <path d="M21 15l-3.5-4-3 3.5-2-2.5L7 17h14z" />
+              </svg>
+              <h3 class="text-sm font-heading font-semibold text-slate-100">
+                Native Desktop Photos & Gallery App
+              </h3>
+            </div>
+            <p
+              class="relative mb-2 text-[0.7rem] uppercase tracking-wide text-primary/80"
+            >
+              Tauri · Rust · React
+            </p>
+            <p class="relative text-slate-200">
+              Desktop application for managing photos and videos on external
+              drives, with a React-based frontend and Rust backend powered by
+              Tauri.
+            </p>
+          </article>
+
+          <!-- Telegram Mini App / ChatGPT Clone -->
+          <article
+            class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <div
+              class="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"
+            ></div>
+            <div class="relative flex items-center gap-2 mb-1">
+              <svg
+                class="h-4 w-4 text-primary shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 2L11 13" />
+                <path d="M22 2L15 22 11 13 2 9 22 2z" />
+              </svg>
+              <h3 class="text-sm font-heading font-semibold text-slate-100">
+                Telegram Mini App – ChatGPT-like Experience
+              </h3>
+            </div>
+            <p
+              class="relative mb-2 text-[0.7rem] uppercase tracking-wide text-primary/80"
+            >
+              Web · Telegram Mini Apps · OpenAI
+            </p>
+            <p class="relative text-slate-200">
+              A Telegram Mini App clone of ChatGPT with most core AI features,
+              providing conversational AI access inside the Telegram ecosystem.
+            </p>
+          </article>
+
+          <!-- Kahoot-like platform -->
+          <article
+            class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <div
+              class="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"
+            ></div>
+            <div class="relative flex items-center gap-2 mb-1">
+              <svg
+                class="h-4 w-4 text-primary shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="4" width="18" height="14" rx="2" />
+                <path d="M10 9h4" />
+                <path d="M9 13h6" />
+              </svg>
+              <h3 class="text-sm font-heading font-semibold text-slate-100">
+                Kahoot-like Web & Mobile Exam Prep Platform
+              </h3>
+            </div>
+            <p
+              class="relative mb-2 text-[0.7rem] uppercase tracking-wide text-primary/80"
+            >
+              React · React Native
+            </p>
+            <p class="relative text-slate-200">
+              Built a quiz platform for German students to prepare for real
+              exams, supporting custom question and answer sets across web and
+              mobile.
+            </p>
+          </article>
+
+          <!-- 3D Engine -->
+          <article
+            class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <div
+              class="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"
+            ></div>
+            <div class="relative flex items-center gap-2 mb-1">
+              <svg
+                class="h-4 w-4 text-primary shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6z" />
+                <path d="M5 6l7 4 7-4" />
+              </svg>
+              <h3 class="text-sm font-heading font-semibold text-slate-100">
+                Custom 3D OpenGL Game Engine
+              </h3>
+            </div>
+            <p
+              class="relative mb-2 text-[0.7rem] uppercase tracking-wide text-primary/80"
+            >
+              C++ · OpenGL · GLEW · CMake
+            </p>
+            <p class="relative text-slate-200">
+              Implemented a 3D engine with renderer, entity-component-system,
+              and Wavefront model loading, focusing on engine architecture and
+              performance.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="space-y-6" data-animate>
+        <div class="flex items-center justify-between gap-4">
+          <h2
+            class="font-heading text-xl font-semibold text-slate-50 md:text-2xl"
+          >
+            Education (in Germany)
+          </h2>
+          <span
+            class="h-px flex-1 bg-linear-to-r from-primary/60 via-primary/20 to-transparent"
+          ></span>
+        </div>
+
+        <div class="space-y-4 text-xs md:text-sm">
+          <article
+            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <h3 class="text-sm font-heading font-semibold text-slate-100">
+              Erweiterter Realschulabschluss · Focus: Business & Administration
+            </h3>
+            <p class="text-xs text-primary">2024 – 2025 · Germany</p>
+          </article>
+
+          <article
+            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+          >
+            <h3 class="text-sm font-heading font-semibold text-slate-100">
+              Abitur (in progress) · Focus: Information Technology
+            </h3>
+            <p class="text-xs text-primary">2025 – Present · Germany</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="space-y-6" data-animate>
+        <div class="flex items-center justify-between gap-4">
+          <h2
+            class="font-heading text-xl font-semibold text-slate-50 md:text-2xl"
+          >
+            Contact
+          </h2>
+          <span
+            class="h-px flex-1 bg-linear-to-r from-primary/60 via-primary/20 to-transparent"
+          ></span>
+        </div>
+
+        <div
+          class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
+        >
+          <p class="mb-4 text-slate-200">
+            Open to roles in software engineering, full-stack development, and
+            projects that mix web, systems, and infrastructure.
+          </p>
+
+          <div class="grid gap-4 md:grid-cols-2">
+            <dl class="space-y-2 text-slate-200">
+              <div>
+                <dt class="flex items-center gap-1 text-slate-400">
+                  <svg
+                    class="h-3.5 w-3.5 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M22 4.5V19.5C22 20.3284 21.3284 21 20.5 21H3.5C2.67157 21 2 20.3284 2 19.5V4.5"
+                    />
+                    <path
+                      d="M2 5L10.5858 12.2929C11.3668 12.9497 12.6332 12.9497 13.4142 12.2929L22 5"
+                    />
+                  </svg>
+                  Email
+                </dt>
+                <dd>
+                  <a
+                    href="mailto:adal.amir07@gmail.com"
+                    class="hover:text-primary"
+                    >adal.amir07@gmail.com</a
+                  >
+                </dd>
+              </div>
+              <div>
+                <dt class="flex items-center gap-1 text-slate-400">
+                  <svg
+                    class="h-3.5 w-3.5 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M22 16.92V21a1 1 0 0 1-1.09 1A19.79 19.79 0 0 1 3 5.09 1 1 0 0 1 4 4h4.09a1 1 0 0 1 1 .75l1.12 4.49a1 1 0 0 1-.54 1.14l-2.49 1.12a16 16 0 0 0 7.27 7.27l1.12-2.49a1 1 0 0 1 1.14-.54l4.49 1.12a1 1 0 0 1 .71.95z"
+                    />
+                  </svg>
+                  Phone
+                </dt>
+                <dd>+49&nbsp;173&nbsp;3942115</dd>
+              </div>
+              <div>
+                <dt class="flex items-center gap-1 text-slate-400">
+                  <svg
+                    class="h-3.5 w-3.5 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  Location
+                </dt>
+                <dd>Saxony-Anhalt, Germany</dd>
+              </div>
+            </dl>
+
+            <div class="space-y-2">
+              <p class="text-slate-400">You can also add links here:</p>
+              <ul class="space-y-1 text-slate-200 text-xs">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="h-3.5 w-3.5 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                  </svg>
+                  <span class="font-semibold text-slate-100">GitHub:</span>
+                  github.com/LandaMm
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="h-3.5 w-3.5 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M16 8a6 6 0 0 1-6 6H8v6H5V4h5a6 6 0 0 1 6 4z" />
+                  </svg>
+                  <span class="font-semibold text-slate-100">LinkedIn:</span>
+                  linkedin.com/in/amir-adal-043743241/
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="h-3.5 w-3.5 text-primary"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M3 12h18" />
+                    <path d="M3 6h18" />
+                    <path d="M3 18h18" />
+                  </svg>
+                  <span class="font-semibold text-slate-100">Portfolio:</span>
+                  adalspace.com
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800/80 bg-bg-dark/90 py-6">
+      <div
+        class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 text-xs text-slate-500 md:flex-row"
+      >
+        <p>© <span id="year"></span> · Amir Adal · Software Engineer</p>
+        <p class="text-[0.7rem] text-slate-500">
+          Built with Tailwind CSS · Inter & Montserrat · Dark mode
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
