@@ -68,13 +68,22 @@ const closeLightbox = () => {
   lightbox.close();
 };
 
-document.querySelectorAll("[data-lightbox-src]").forEach((trigger) => {
+document.querySelectorAll("[data-lightbox-trigger], [data-lightbox-src]").forEach((trigger) => {
   trigger.addEventListener("click", () => {
     if (!lightbox || !lightboxImage || !lightboxCaption) return;
 
+    const previewImage = trigger.querySelector("img");
+    const resolvedSource =
+      previewImage?.currentSrc ||
+      previewImage?.src ||
+      trigger.dataset.lightboxSrc ||
+      "";
+
+    if (!resolvedSource) return;
+
     lightboxTrigger = trigger;
-    lightboxImage.src = trigger.dataset.lightboxSrc ?? "";
-    lightboxImage.alt = trigger.dataset.lightboxAlt ?? "Project screenshot";
+    lightboxImage.src = resolvedSource;
+    lightboxImage.alt = previewImage?.alt || trigger.dataset.lightboxAlt || "Project screenshot";
     lightboxCaption.textContent = trigger.dataset.lightboxCaption ?? "";
     lightbox.showModal();
   });
