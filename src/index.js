@@ -1,154 +1,93 @@
 import "./styles.css";
 
-// Set year in footer
-const yearEl = document.getElementById("year");
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear().toString();
+const year = document.getElementById("year");
+if (year) {
+  year.textContent = String(new Date().getFullYear());
 }
 
-// Hero entrance animation
-window.addEventListener("DOMContentLoaded", () => {
-  const heroEls = document.querySelectorAll("[data-hero]");
-  heroEls.forEach((el, idx) => {
-    setTimeout(() => {
-      el.classList.add("animate-fade-in-up");
-      el.classList.remove("opacity-0", "translate-y-6");
-    }, 150 * idx);
+const header = document.querySelector("[data-header]");
+const updateHeader = () => {
+  header?.classList.toggle("is-scrolled", window.scrollY > 20);
+};
+updateHeader();
+window.addEventListener("scroll", updateHeader, { passive: true });
+
+const menuButton = document.querySelector("[data-menu-button]");
+const mobileNav = document.querySelector("[data-mobile-nav]");
+
+const closeMenu = () => {
+  menuButton?.setAttribute("aria-expanded", "false");
+  mobileNav?.classList.remove("is-open");
+  document.body.classList.remove("menu-open");
+};
+
+menuButton?.addEventListener("click", () => {
+  const nextOpen = menuButton.getAttribute("aria-expanded") !== "true";
+  menuButton.setAttribute("aria-expanded", String(nextOpen));
+  mobileNav?.classList.toggle("is-open", nextOpen);
+  document.body.classList.toggle("menu-open", nextOpen);
+});
+
+mobileNav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", closeMenu);
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 760) closeMenu();
+});
+
+const revealItems = document.querySelectorAll("[data-reveal]");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+} else {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px" }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+}
+
+const lightbox = document.querySelector("[data-lightbox]");
+const lightboxImage = lightbox?.querySelector("[data-lightbox-image]");
+const lightboxCaption = lightbox?.querySelector("[data-lightbox-caption]");
+const lightboxClose = lightbox?.querySelector("[data-lightbox-close]");
+let lightboxTrigger = null;
+
+const closeLightbox = () => {
+  if (!lightbox?.open) return;
+  lightbox.close();
+};
+
+document.querySelectorAll("[data-lightbox-src]").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    if (!lightbox || !lightboxImage || !lightboxCaption) return;
+
+    lightboxTrigger = trigger;
+    lightboxImage.src = trigger.dataset.lightboxSrc ?? "";
+    lightboxImage.alt = trigger.dataset.lightboxAlt ?? "Project screenshot";
+    lightboxCaption.textContent = trigger.dataset.lightboxCaption ?? "";
+    lightbox.showModal();
   });
 });
 
-// Scroll animations for sections
-const animatedSections = document.querySelectorAll("[data-animate]");
-animatedSections.forEach((section) => {
-  section.classList.add(
-    "opacity-0",
-    "translate-y-8",
-    "transition-all",
-    "duration-700"
-  );
+lightboxClose?.addEventListener("click", closeLightbox);
+
+lightbox?.addEventListener("click", (event) => {
+  if (event.target === lightbox) closeLightbox();
 });
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate-fade-in-up");
-        entry.target.classList.remove("opacity-0", "translate-y-8");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-
-animatedSections.forEach((section) => observer.observe(section));
-
-// tailwind.config = {
-//   theme: {
-//     extend: {
-//       fontFamily: {
-//         sans: [
-//           "Inter",
-//           "ui-sans-serif",
-//           "system-ui",
-//           "-apple-system",
-//           "BlinkMacSystemFont",
-//           '"Segoe UI"',
-//           "sans-serif",
-//         ],
-//         heading: [
-//           "Montserrat",
-//           "ui-sans-serif",
-//           "system-ui",
-//           "-apple-system",
-//           "BlinkMacSystemFont",
-//           '"Segoe UI"',
-//           "sans-serif",
-//         ],
-//       },
-//       colors: {
-//         primary: "#1e90ff", // dodgerblue
-//         "bg-primary": "#1e90ff",
-//         "bg-dark": "#020617", // slate-950-ish
-//         "card-dark": "#020617",
-//         "card-elevated": "#020617",
-//       },
-//       boxShadow: {
-//         glow: "0 0 40px rgba(30,144,255,0.45)",
-//       },
-//       keyframes: {
-//         "fade-in-up": {
-//           "0%": { opacity: "0", transform: "translateY(20px)" },
-//           "100%": { opacity: "1", transform: "translateY(0)" },
-//         },
-//         "fade-in": {
-//           "0%": { opacity: "0" },
-//           "100%": { opacity: "1" },
-//         },
-//         "scale-in": {
-//           "0%": { opacity: "0", transform: "scale(0.96)" },
-//           "100%": { opacity: "1", transform: "scale(1)" },
-//         },
-//         "glow-pulse": {
-//           "0%,100%": { boxShadow: "0 0 0 rgba(30,144,255,0.0)" },
-//           "50%": { boxShadow: "0 0 40px rgba(30,144,255,0.5)" },
-//         },
-//         "border-spin": {
-//           "0%": { transform: "rotate(0deg)" },
-//           "100%": { transform: "rotate(360deg)" },
-//         },
-//       },
-//       animation: {
-//         "fade-in-up": "fade-in-up 0.8s ease-out forwards",
-//         "fade-in": "fade-in 1s ease-out forwards",
-//         "scale-in": "scale-in 0.7s ease-out forwards",
-//         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-//         "border-spin": "border-spin 8s linear infinite",
-//       },
-//     },
-//   },
-// };
-
-// --- SCRIPTING
-
-// Set year
-// document.getElementById("year").textContent = new Date()
-//   .getFullYear()
-//   .toString();
-
-// // Hero entrance animation
-// window.addEventListener("DOMContentLoaded", () => {
-//   const heroEls = document.querySelectorAll("[data-hero]");
-//   heroEls.forEach((el, idx) => {
-//     setTimeout(() => {
-//       el.classList.add("animate-fade-in-up");
-//       el.classList.remove("opacity-0", "translate-y-6");
-//     }, 150 * idx);
-//   });
-// });
-
-// // Scroll animations for sections
-// const animatedSections = document.querySelectorAll("[data-animate]");
-// animatedSections.forEach((section) => {
-//   section.classList.add(
-//     "opacity-0",
-//     "translate-y-8",
-//     "transition-all",
-//     "duration-700"
-//   );
-// });
-
-// const observer = new IntersectionObserver(
-//   (entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         entry.target.classList.add("animate-fade-in-up");
-//         entry.target.classList.remove("opacity-0", "translate-y-8");
-//         observer.unobserve(entry.target);
-//       }
-//     });
-//   },
-//   { threshold: 0.12 }
-// );
-
-// animatedSections.forEach((section) => observer.observe(section));
+lightbox?.addEventListener("close", () => {
+  if (lightboxImage) lightboxImage.src = "";
+  lightboxTrigger?.focus();
+  lightboxTrigger = null;
+});

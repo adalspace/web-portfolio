@@ -1,1268 +1,529 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Amir Adal – Software Engineer & Full-Stack Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="description" content="Amir Adal is a software engineer focused on backend systems, C++, Linux infrastructure, and production software." />
+  <meta name="keywords" content="Amir Adal, Software Engineer, C++, Backend, Systems Programming, NestJS, Linux, Docker, Kubernetes" />
+  <meta name="author" content="Amir Adal" />
 
-    <!-- Google Fonts: Inter + Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Amir Adal — Software Engineer" />
+  <meta property="og:description" content="Backend, systems, and infrastructure engineering. Production products, custom languages, game engines, and Linux operations." />
+  <meta property="og:url" content="https://adalspace.com" />
+  <meta property="og:image" content="./images/profile.jpg" />
 
-    <!-- <link href="/dist/styles.css" rel="stylesheet" /> -->
-  </head>
-  <body
-    class="bg-bg-dark bg-slate-950 text-slate-100 min-h-screen font-sans antialiased relative"
-  >
-    <!-- Background gradient + subtle glow -->
-    <div
-      class="pointer-events-none fixed inset-0 opacity-60"
-      aria-hidden="true"
-    >
-      <div
-        class="absolute -top-40 -left-40 h-80 w-80 rounded-full bg-primary/30 blur-3xl"
-      ></div>
-      <div
-        class="absolute top-1/3 -right-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl"
-      ></div>
-      <div
-        class="absolute bottom-0 left-1/4 h-72 w-72 rounded-full bg-primary/10 blur-3xl"
-      ></div>
+  <title>Amir Adal — Software Engineer</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Amir Adal",
+    "url": "https://adalspace.com",
+    "email": "mailto:adal.amir07@gmail.com",
+    "jobTitle": "Software Engineer",
+    "sameAs": [
+      "https://github.com/adalspace",
+      "https://www.linkedin.com/in/amir-adal-043743241/"
+    ],
+    "knowsAbout": [
+      "C++", "C", "TypeScript", "NestJS", "React", "Linux", "Docker", "Redis", "PostgreSQL", "Software Architecture"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Amir Adal, home">
+        <span class="brand-mark" aria-hidden="true">AA</span>
+        <span class="brand-text">Amir Adal</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="text-link desktop-only" href="mailto:adal.amir07@gmail.com">Contact</a>
+        <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" data-menu-button>
+          <span></span><span></span>
+        </button>
+      </div>
     </div>
 
-    <!-- NAVBAR -->
-    <header
-      class="fixed top-0 left-0 right-0 z-40 border-b border-slate-800/60 bg-bg-dark/70 backdrop-blur-lg"
-    >
-      <nav
-        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3"
-      >
-        <a href="#top" class="flex items-center gap-2">
-          <div
-            class="relative flex h-8 w-8 items-center justify-center rounded-xl bg-slate-900/80"
-          >
-            <!-- Simple code icon -->
-            <svg
-              class="h-4 w-4 text-primary"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="16 18 22 12 16 6" />
-              <polyline points="8 6 2 12 8 18" />
-            </svg>
-            <span
-              class="pointer-events-none absolute inset-0 rounded-xl border border-primary/40 animate-border-spin"
-            ></span>
-          </div>
-          <span class="text-sm font-medium text-slate-200">Amir&nbsp;Adal</span>
-        </a>
+    <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="mailto:adal.amir07@gmail.com">Contact</a>
+    </nav>
+  </header>
 
-        <div class="hidden items-center gap-6 text-xs font-medium md:flex">
-          <a href="#about" class="text-slate-300 hover:text-primary">About</a>
-          <a href="#skills" class="text-slate-300 hover:text-primary">Skills</a>
-          <a href="#experience" class="text-slate-300 hover:text-primary"
-            >Experience</a
-          >
-          <a href="#projects" class="text-slate-300 hover:text-primary"
-            >Projects</a
-          >
-          <a href="#education" class="text-slate-300 hover:text-primary"
-            >Education</a
-          >
-          <a href="#contact" class="text-slate-300 hover:text-primary"
-            >Contact</a
-          >
-        </div>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
 
-        <a
-          href="#contact"
-          class="inline-flex items-center gap-1.5 rounded-full border border-primary/70 px-3 py-1.5 text-[0.7rem] font-semibold uppercase tracking-wide text-primary shadow-glow hover:bg-primary/10"
-        >
-          <svg
-            class="h-3 w-3"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M22 4.5V19.5C22 20.3284 21.3284 21 20.5 21H3.5C2.67157 21 2 20.3284 2 19.5V4.5"
-            />
-            <path
-              d="M2 5L10.5858 12.2929C11.3668 12.9497 12.6332 12.9497 13.4142 12.2929L22 5"
-            />
-          </svg>
-          <span>Let’s talk</span>
-        </a>
-      </nav>
-    </header>
-
-    <main id="top" class="mx-auto max-w-6xl px-4 pt-24 pb-16 space-y-24">
-      <!-- HERO / LANDING -->
-      <section
-        id="hero"
-        class="relative flex flex-col items-start gap-10 pt-10 md:flex-row md:items-center"
-      >
-        <div
-          class="relative flex-1 opacity-0 translate-y-6 transition-all duration-700"
-          data-hero
-        >
-          <p
-            class="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-primary/80"
-          >
-            Software Engineer · Full-Stack Developer
-          </p>
-          <h1
-            class="mb-4 font-heading text-3xl font-semibold leading-tight tracking-tight text-slate-50 md:text-4xl lg:text-5xl"
-          >
-            Building reliable systems,
-            <span class="text-primary">from pixel to kernel</span>.
-          </h1>
-          <p class="mb-6 max-w-xl text-sm text-slate-300 md:text-base">
-            I’m <span class="font-semibold text-slate-100">Amir Adal</span>, a
-            full-stack engineer who lives in both worlds:
-            <span class="text-slate-100">modern web apps</span> (React, Vite,
-            Svelte) and <span class="text-slate-100">low-level systems</span>
-            (C++, Rust, Linux, Wayland). I care about performance, clean
-            architecture, and shipping real products end-to-end.
+      <div class="shell hero-grid">
+        <div class="hero-copy" data-reveal>
+          <div class="eyebrow"><span class="status-dot"></span> Open to software engineering opportunities</div>
+          <h1>I build production software from <span>API to infrastructure</span>.</h1>
+          <p class="hero-lead">
+            Software engineer focused on backend systems, C++, Linux infrastructure, and dependable product delivery.
+            I have shipped client platforms, modernized legacy applications, built my own production AI service,
+            and designed low-level tools from scratch.
           </p>
 
-          <!-- Small icon badges row -->
-          <div class="mb-4 flex flex-wrap gap-2 text-[0.7rem]">
-            <span
-              class="inline-flex items-center gap-1 rounded-full bg-slate-900/80 px-2.5 py-1 text-slate-200 border border-slate-800"
-            >
-              <svg
-                class="h-3 w-3 text-primary"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                <path d="M8 9h8" />
-                <path d="M8 13h5" />
-              </svg>
-              <span>Full-stack web</span>
-            </span>
-            <span
-              class="inline-flex items-center gap-1 rounded-full bg-slate-900/80 px-2.5 py-1 text-slate-200 border border-slate-800"
-            >
-              <svg
-                class="h-3 w-3 text-primary"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="3" />
-                <path
-                  d="M19.4 15A1.65 1.65 0 0 0 21 13.35 2 2 0 0 0 19 11.5a1.65 1.65 0 0 0-1.4-.75"
-                />
-                <path
-                  d="M4.6 9A1.65 1.65 0 0 0 3 10.65 2 2 0 0 0 5 12.5a1.65 1.65 0 0 0 1.4.75"
-                />
-              </svg>
-              <span>Systems & Linux</span>
-            </span>
-            <span
-              class="inline-flex items-center gap-1 rounded-full bg-slate-900/80 px-2.5 py-1 text-slate-200 border border-slate-800"
-            >
-              <svg
-                class="h-3 w-3 text-primary"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M4 4H20V20H4z" />
-                <path d="M4 9H20" />
-                <path d="M9 4V20" />
-              </svg>
-              <span>Teaching & mentoring</span>
-            </span>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Explore selected work</a>
+            <a class="button button-secondary" href="https://github.com/adalspace" target="_blank" rel="noreferrer">View GitHub</a>
           </div>
 
-          <div class="mb-6 flex flex-wrap items-center gap-3">
-            <a
-              href="#projects"
-              class="group inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-slate-950 shadow-glow transition hover:bg-primary/90"
-            >
-              View projects
-              <span
-                class="inline-block transition-transform group-hover:translate-x-0.5"
-                >→</span
-              >
-            </a>
-            <a
-              href="#experience"
-              class="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-950/60 px-4 py-2 text-xs font-medium text-slate-200 hover:border-primary/70 hover:text-primary"
-            >
-              <svg
-                class="h-3.5 w-3.5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-              <span>Experience timeline</span>
-            </a>
-          </div>
-
-          <dl
-            class="grid max-w-lg grid-cols-2 gap-3 text-xs text-slate-300 md:text-sm"
-          >
-            <div>
-              <dt class="font-semibold text-slate-100">Location</dt>
-              <dd>Saxony-Anhalt, Germany</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-100">Role</dt>
-              <dd>Software Engineer & Full-Stack Developer</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-100">Email</dt>
-              <dd>
-                <a
-                  href="mailto:adal.amir07@gmail.com"
-                  class="hover:text-primary"
-                  >adal.amir07@gmail.com</a
-                >
-              </dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-100">Mobile</dt>
-              <dd>+49&nbsp;173&nbsp;3942115</dd>
-            </div>
-          </dl>
-        </div>
-
-        <!-- HERO SIDE CARD -->
-        <div
-          class="relative mt-6 flex-1 md:mt-0 md:max-w-sm opacity-0 translate-y-6 transition-all duration-700 delay-150"
-          data-hero
-        >
-          <div
-            class="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950/80 p-5 shadow-xl shadow-slate-950/70 hover:shadow-glow hover:-translate-y-1 transition-transform duration-300"
-          >
-            <div
-              class="pointer-events-none absolute inset-0 rounded-3xl border border-primary/40 opacity-60"
-            ></div>
-            <div
-              class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary/25 blur-2xl"
-            ></div>
-
-            <!-- PROFILE PICTURE -->
-            <div class="mb-4 flex items-center gap-3">
-              <div
-                class="relative h-20 w-20 rounded-full overflow-hidden border-2 border-primary/70 shadow-glow"
-              >
-                <img
-                  src="./images/profile.jpg"
-                  alt="Portrait of Amir Adal"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-              <div>
-                <p class="text-sm font-heading font-semibold text-slate-100">
-                  Amir Adal
-                </p>
-                <p class="text-xs text-slate-400">
-                  Software Engineer · Full-Stack Developer
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-between gap-3 mb-3">
-              <h2 class="text-sm font-heading font-semibold text-slate-100">
-                Basic Info
-              </h2>
-              <span
-                class="inline-flex items-center gap-1 rounded-full bg-slate-900/80 px-2 py-1 text-[0.65rem] uppercase tracking-wide text-primary border border-slate-700"
-              >
-                <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
-                Available for work
-              </span>
-            </div>
-
-            <dl class="space-y-2 text-xs text-slate-300">
-              <div class="flex justify-between gap-4">
-                <dt class="text-slate-400">Full Name</dt>
-                <dd class="font-medium text-slate-100 text-right">
-                  Amir&nbsp;Adal
-                </dd>
-              </div>
-              <div class="flex justify-between gap-4">
-                <dt class="text-slate-400">Date of Birth</dt>
-                <dd class="text-right">11.07.2005</dd>
-              </div>
-              <div class="flex justify-between gap-4">
-                <dt class="text-slate-400">Address</dt>
-                <dd class="max-w-44 text-right">
-                  Meseberger Str. 5, 39326 Wolmirstedt, Germany
-                </dd>
-              </div>
-              <div class="flex justify-between gap-4">
-                <dt class="text-slate-400">Nationality</dt>
-                <dd class="text-right">russian, syrian</dd>
-              </div>
-            </dl>
-
-            <div class="mt-5 border-t border-slate-800 pt-4">
-              <p class="mb-1 text-xs uppercase tracking-wide text-slate-400">
-                Actively working with
-              </p>
-              <p class="text-xs text-slate-200">
-                TypeScript · JavaScript · Go · C++ · Rust · React · Svelte ·
-                Linux · PostgreSQL
-              </p>
-            </div>
+          <div class="hero-links" aria-label="Professional links">
+            <a href="mailto:adal.amir07@gmail.com">adal.amir07@gmail.com</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://www.linkedin.com/in/amir-adal-043743241/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span aria-hidden="true">·</span>
+            <span>Saxony-Anhalt, Germany</span>
           </div>
         </div>
-      </section>
 
-      <!-- ABOUT -->
-      <section id="about" class="space-y-6" data-animate>
-        <div class="flex items-center justify-between gap-4">
-          <h2
-            class="font-heading text-xl font-semibold text-slate-50 md:text-2xl"
-          >
-            About
-          </h2>
-          <span
-            class="h-px flex-1 bg-linear-to-r from-primary/60 to-transparent"
-          ></span>
+        <aside class="hero-panel" data-reveal aria-label="Profile summary">
+          <div class="profile-topline">
+            <div class="profile-photo-wrap">
+              <img class="profile-photo" src="./images/profile.jpg" alt="Portrait of Amir Adal" />
+            </div>
+            <div>
+              <p class="profile-name">Amir Adal</p>
+              <p class="profile-role">Software Engineer</p>
+            </div>
+          </div>
+
+          <div class="focus-list">
+            <div>
+              <span>01</span>
+              <p><strong>Backend & APIs</strong><br />NestJS, PostgreSQL, Redis, integrations</p>
+            </div>
+            <div>
+              <span>02</span>
+              <p><strong>Systems</strong><br />C++, memory, compilers, rendering</p>
+            </div>
+            <div>
+              <span>03</span>
+              <p><strong>Infrastructure</strong><br />Linux, Docker, Nginx, self-hosting</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="shell proof-strip" data-reveal>
+        <div class="proof-item">
+          <strong>2021</strong>
+          <span>Started delivering paid software</span>
+        </div>
+        <div class="proof-item">
+          <strong>55</strong>
+          <span>Registered OpenGPT users at last check</span>
+        </div>
+        <div class="proof-item">
+          <strong>20+</strong>
+          <span>Daily generated messages during active monitoring</span>
+        </div>
+        <div class="proof-item">
+          <strong>End-to-end</strong>
+          <span>Architecture, development, deployment, operations</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="section-kicker">Selected work</p>
+            <h2>Products and systems with real technical depth.</h2>
+          </div>
+          <p>
+            A focused selection of production applications and open-source engineering projects.
+            Client source code remains private where required.
+          </p>
         </div>
 
-        <div
-          class="grid gap-6 md:grid-cols-[2fr,1.3fr] lg:grid-cols-[2fr,1.2fr]"
-        >
-          <div
-            class="rounded-2xl border border-slate-800 bg-slate-950/70 p-5 text-sm leading-relaxed text-slate-200 hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <p class="mb-3">
-              I’m a <span class="font-semibold">software engineer</span> and
-              <span class="font-semibold">full-stack developer</span> who enjoys
-              moving between high-level product work and low-level system
-              details. I’ve built everything from CRM frontends and mobile apps
-              to custom programming languages and 3D engines in C++.
+        <div class="featured-project" data-reveal>
+          <div class="featured-copy">
+            <div class="project-meta">
+              <span class="project-number">01</span>
+              <span class="project-state">Production product</span>
+            </div>
+            <h3>OpenGPT</h3>
+            <p class="project-subtitle">A Telegram-native AI platform that I conceived, built, deployed, and continue to operate.</p>
+            <p class="project-description">
+              OpenGPT delivers streamed AI conversations, image generation, accounts, premium subscriptions,
+              administrative workflows, and payments through a Telegram Mini App. The service runs on my own Ubuntu Server
+              homelab in Docker containers managed with Portainer and exposed through Nginx, HTTPS, and automated Cloudflare DNS updates.
             </p>
-            <p class="mb-3">
-              My thing is combining
-              <span class="text-slate-100">solid engineering</span> with
-              <span class="text-slate-100">clean UX</span>: carefully designed
-              APIs, stable infrastructure, and interfaces that feel fast and
-              intentional.
+
+            <div class="metric-grid">
+              <div><strong>~55</strong><span>registered users</span></div>
+              <div><strong>20+</strong><span>messages/day*</span></div>
+              <div><strong>24/7</strong><span>self-hosted service</span></div>
+            </div>
+            <p class="metric-note">* During the period of active usage monitoring.</p>
+
+            <div class="tag-list" aria-label="OpenGPT technologies">
+              <span>NestJS</span><span>React</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>Telegram API</span><span>OpenAI API</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/adalspace/opengpt-backend" target="_blank" rel="noreferrer">Backend repository ↗</a>
+              <a href="https://github.com/adalspace/opengpt-frontend" target="_blank" rel="noreferrer">Frontend repository ↗</a>
+            </div>
+          </div>
+
+          <div class="architecture-card" aria-label="OpenGPT architecture overview">
+            <div class="architecture-label">Production architecture</div>
+            <div class="architecture-flow">
+              <div class="arch-node arch-primary">Telegram Mini App</div>
+              <span>↓</span>
+              <div class="arch-node">Nginx · HTTPS</div>
+              <span>↓</span>
+              <div class="arch-node arch-primary">NestJS API</div>
+              <div class="arch-split">
+                <div class="arch-node">PostgreSQL</div>
+                <div class="arch-node">Redis</div>
+              </div>
+              <div class="arch-split">
+                <div class="arch-node">OpenAI</div>
+                <div class="arch-node">Payments</div>
+              </div>
+              <div class="arch-footer">Ubuntu Server · Docker · Portainer</div>
+            </div>
+          </div>
+        </div>
+
+        <article class="media-project media-project-cheetah" data-reveal>
+          <div class="media-project-copy">
+            <div class="project-meta">
+              <span class="project-number">02</span>
+              <span class="project-state">Open source · Video demo</span>
+            </div>
+            <h3>Cheetah</h3>
+            <p class="project-subtitle">A strongly typed automation language and interpreter written in C++.</p>
+            <p class="project-description">
+              Cheetah is designed for fast desktop automation without giving up explicit types or native extensibility.
+              I built the lexer, parser, runtime, type system, generics, standard-library foundations, and support for loading C++ modules directly.
             </p>
+
+            <ul class="project-highlights">
+              <li>Strict type handling with deliberate casting and structured language features.</li>
+              <li>Native C++ extension model for performance-sensitive automation modules.</li>
+              <li>Cross-platform CMake workflow with continuous integration through GitHub Actions.</li>
+            </ul>
+
+            <div class="tag-list" aria-label="Cheetah technologies">
+              <span>C++</span><span>Language Design</span><span>Parsing</span><span>Native Modules</span><span>CMake</span><span>CI</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/adalspace/cheetah" target="_blank" rel="noreferrer">Explore repository ↗</a>
+              <a href="https://www.youtube.com/watch?v=bkd4AsFHyPM" target="_blank" rel="noreferrer">Watch on YouTube ↗</a>
+            </div>
+          </div>
+
+          <div class="project-media-card">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/bkd4AsFHyPM?rel=0&amp;modestbranding=1"
+                title="Cheetah programming language preview"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="media-caption">
+              <span>Public demo</span>
+              <p>See Cheetah execute automation scripts and explore the design goals behind its typed, C++-extensible runtime.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="media-project media-project-engine" data-reveal>
+          <div class="media-project-copy">
+            <div class="project-meta">
+              <span class="project-number">03</span>
+              <span class="project-state">Systems project · In development</span>
+            </div>
+            <h3>Modular 3D Game Engine</h3>
+            <p class="project-subtitle">A C++ engine built to understand rendering and engine architecture from first principles.</p>
+            <p class="project-description">
+              The current architecture separates windowing, rendering, scenes, assets, events, and UI into dependency-aware layers.
+              It includes renderer and platform abstractions, ECS-based scenes, model and texture loading, custom containers, and ImGui development tooling.
+            </p>
+
+            <div class="tag-list" aria-label="Game engine technologies">
+              <span>C++</span><span>OpenGL</span><span>SDL3</span><span>EnTT</span><span>Assimp</span><span>ImGui</span><span>CMake</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/adalspace/noname-engine" target="_blank" rel="noreferrer">Current engine ↗</a>
+              <a href="https://github.com/adalspace/toy-engine-v0.1" target="_blank" rel="noreferrer">Earlier prototype ↗</a>
+            </div>
+          </div>
+
+          <div class="engine-gallery" aria-label="Game engine screenshots">
+            <button
+              class="gallery-item gallery-item-featured"
+              type="button"
+              data-lightbox-src="./images/projects/engine-spaceship.webp"
+              data-lightbox-alt="A spacecraft rendered in Amir Adal's modular C++ game engine beside its custom debugger interface"
+              data-lightbox-caption="Spacecraft scene in the current engine build, shown beside the custom ImGui debugger interface.">
+              <img src="./images/projects/engine-spaceship.webp" alt="Spacecraft rendered in the modular C++ game engine" loading="lazy" />
+              <span class="gallery-overlay">Open image</span>
+            </button>
+
+            <button
+              class="gallery-item"
+              type="button"
+              data-lightbox-src="./images/projects/engine-bmw.webp"
+              data-lightbox-alt="A red BMW model rendered in Amir Adal's modular C++ game engine"
+              data-lightbox-caption="Model-loading and rendering test in the current modular engine.">
+              <img src="./images/projects/engine-bmw.webp" alt="Red BMW model rendered in the modular C++ game engine" loading="lazy" />
+              <span class="gallery-overlay">Open image</span>
+            </button>
+
+            <button
+              class="gallery-item"
+              type="button"
+              data-lightbox-src="./images/projects/engine-scanned-car.webp"
+              data-lightbox-alt="A scanned damaged car rendered in an earlier OpenGL engine prototype"
+              data-lightbox-caption="Earlier OpenGL prototype rendering imported scanned geometry with materials, lighting, and shadows.">
+              <img src="./images/projects/engine-scanned-car.webp" alt="Scanned damaged car rendered in an earlier OpenGL prototype" loading="lazy" />
+              <span class="gallery-overlay">Open image</span>
+            </button>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="project-card" data-reveal>
+            <div class="project-meta">
+              <span class="project-number">04</span>
+              <span class="project-state">Client platform</span>
+            </div>
+            <h3>Certification Exam Modernization</h3>
+            <p class="project-subtitle">A large legacy migration for a professional online certification platform.</p>
             <p>
-              Outside of coding, I recharge with
-              <span class="text-slate-100"
-                >football, volleyball, table tennis</span
-              >
-              and long city or off-city rides on my bicycle.
+              Upgraded an approximately eight-year-old React and Node.js application, resolved breaking changes,
+              refactored poorly structured modules, and maintained AWS-integrated proctoring workflows involving identity verification and browser monitoring.
             </p>
-          </div>
-
-          <div
-            class="rounded-2xl border border-slate-800 bg-slate-950/70 p-5 text-xs text-slate-200 md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
-              Quick Highlights
-            </h3>
-            <ul class="space-y-2">
-              <li class="flex items-start gap-2">
-                <svg
-                  class="mt-0.5 h-3.5 w-3.5 text-primary shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M12 20l9-16H3z" />
-                </svg>
-                <span
-                  >Comfortable across
-                  <span class="text-slate-100"
-                    >frontend, backend & system programming</span
-                  >.</span
-                >
-              </li>
-              <li class="flex items-start gap-2">
-                <svg
-                  class="mt-0.5 h-3.5 w-3.5 text-primary shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19 12h2" />
-                  <path d="M3 12h2" />
-                  <path d="M12 5V3" />
-                  <path d="M12 21v-2" />
-                </svg>
-                <span
-                  >Experience with
-                  <span class="text-slate-100"
-                    >Wayland, wlroots, custom Linux setups</span
-                  >
-                  and deployment.</span
-                >
-              </li>
-              <li class="flex items-start gap-2">
-                <svg
-                  class="mt-0.5 h-3.5 w-3.5 text-primary shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M8 6H21V18H8z" />
-                  <path d="M3 6H5V18H3z" />
-                </svg>
-                <span
-                  >Built and shipped
-                  <span class="text-slate-100">real products</span>: CRM
-                  modules, educational platforms, mini-apps and tooling.</span
-                >
-              </li>
-              <li class="flex items-start gap-2">
-                <svg
-                  class="mt-0.5 h-3.5 w-3.5 text-primary shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M12 20v-6" />
-                  <path d="M6 20v-4" />
-                  <path d="M18 20v-8" />
-                  <path d="M4 4h16" />
-                </svg>
-                <span
-                  >Strong focus on
-                  <span class="text-slate-100"
-                    >documentation reading, new tech adoption</span
-                  >, and teaching others.</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="space-y-6" data-animate>
-        <div class="flex items-center justify-between gap-4">
-          <h2
-            class="font-heading text-xl font-semibold text-slate-50 md:text-2xl"
-          >
-            Skills & Stack
-          </h2>
-          <span
-            class="h-px flex-1 bg-linear-to-r from-primary/60 via-primary/20 to-transparent"
-          ></span>
-        </div>
-
-        <div class="grid gap-6 md:grid-cols-2">
-          <!-- Core Skills -->
-          <div
-            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <div class="flex items-center gap-2 mb-3">
-              <div
-                class="flex h-7 w-7 items-center justify-center rounded-full bg-slate-900 border border-slate-700"
-              >
-                <svg
-                  class="h-3.5 w-3.5 text-primary"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="16 18 22 12 16 6" />
-                  <polyline points="8 6 2 12 8 18" />
-                </svg>
-              </div>
-              <h3 class="text-sm font-heading font-semibold text-slate-100">
-                Core & Professional
-              </h3>
-            </div>
-            <dl class="space-y-2">
-              <div>
-                <dt class="text-slate-400">Main skill & hobby</dt>
-                <dd class="text-slate-200">
-                  Coding · Software Architecture · System Design
-                </dd>
-              </div>
-              <div>
-                <dt class="text-slate-400">Mindset</dt>
-                <dd class="text-slate-200">
-                  Documentation-driven, curious, self-taught, comfortable
-                  learning new tech quickly.
-                </dd>
-              </div>
-              <div>
-                <dt class="text-slate-400">Teaching</dt>
-                <dd class="text-slate-200">
-                  Programming & robotics tutor for kids (11–19 years), focusing
-                  on foundations, problem solving and fun projects.
-                </dd>
-              </div>
-              <div>
-                <dt class="text-slate-400">Soft skills</dt>
-                <dd class="text-slate-200">
-                  Cross-team collaboration, mentoring, ownership of codebases,
-                  clear communication across cultures.
-                </dd>
-              </div>
-            </dl>
-          </div>
-
-          <!-- Lifestyle / Sports -->
-          <div
-            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <div class="flex items-center gap-2 mb-3">
-              <div
-                class="flex h-7 w-7 items-center justify-center rounded-full bg-slate-900 border border-slate-700"
-              >
-                <svg
-                  class="h-3.5 w-3.5 text-primary"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="5" r="2" />
-                  <path d="M12 7v5l-2 4" />
-                  <path d="M9 18h3" />
-                  <path d="M16 11l2 4" />
-                  <path d="M19 18h-3" />
-                </svg>
-              </div>
-              <h3 class="text-sm font-heading font-semibold text-slate-100">
-                Outside of Code
-              </h3>
-            </div>
-            <ul class="space-y-2 text-slate-200">
-              <li>
-                <span class="font-semibold text-slate-100">Sports:</span>
-                Football, volleyball, table tennis.
-              </li>
-              <li>
-                <span class="font-semibold text-slate-100">Cycling:</span>
-                Riding in and outside the city to reset and think.
-              </li>
-              <li>
-                <span class="font-semibold text-slate-100">Learning:</span>
-                Regularly reading official docs, RFCs, and deep-dives to stay
-                sharp.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Tech Stack Grids -->
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <!-- Languages -->
-          <div
-            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
-              Programming Languages
-            </h3>
-            <ul class="space-y-1 text-slate-200">
-              <li>
-                <span class="font-semibold text-slate-100">Web:</span>
-                TypeScript, JavaScript, Go, HTML, CSS, PHP, a bit of Python,
-                Node.js
-              </li>
-              <li>
-                <span class="font-semibold text-slate-100">System:</span>
-                C++, C, Rust, Python
-              </li>
-            </ul>
-          </div>
-
-          <!-- Frameworks -->
-          <div
-            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
-              Frameworks & Tooling
-            </h3>
-            <ul class="space-y-1 text-slate-200">
-              <li>React + Vite</li>
-              <li>Svelte + Vite</li>
-              <li>Native Webpack setups</li>
-              <li>Gulp pipelines</li>
-              <li>Raw HTML/CSS/JavaScript projects</li>
-              <li>Tauri (Rust + React) for desktop apps</li>
-            </ul>
-          </div>
-
-          <!-- Linux / DevOps -->
-          <div
-            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
-              Linux & DevOps
-            </h3>
-            <ul class="space-y-1 text-slate-200">
-              <li>Linux filesystem & distro usage (desktop & server)</li>
-              <li>Ubuntu Server, custom Wayland clients, wlroots</li>
-              <li>Bash scripting, deep distro customization</li>
-              <li>
-                Nginx / Apache2 with custom network configs & security
-                considerations
-              </li>
-              <li>
-                Redis, RabbitMQ, PostgreSQL, MongoDB, SQLite3, MinIO blob
-                storage, Apache Kafka
-              </li>
-            </ul>
-          </div>
-
-          <!-- CI/CD -->
-          <div
-            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
-              CI / CD & Infra
-            </h3>
-            <ul class="space-y-1 text-slate-200">
-              <li>Git & GitHub workflows</li>
-              <li>Docker & Portainer</li>
-              <li>Kubernetes (K8s) basics</li>
-            </ul>
-          </div>
-
-          <!-- Productivity -->
-          <div
-            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
-              Productivity & Office
-            </h3>
-            <ul class="space-y-1 text-slate-200">
-              <li>Advanced Microsoft Word, Excel, PowerPoint</li>
-              <li>Documentation, reporting, and technical slides</li>
-            </ul>
-          </div>
-
-          <!-- Languages -->
-          <div
-            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <h3 class="mb-3 text-sm font-heading font-semibold text-slate-100">
-              Spoken Languages
-            </h3>
-            <ul class="space-y-1 text-slate-200">
-              <li>Russian – Native</li>
-              <li>German – Advanced (C1, job-oriented telc certificate)</li>
-              <li>English – Advanced</li>
-              <li>Spanish – Basics</li>
-              <li>Turkish – Basics + good understanding</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- EXPERIENCE -->
-      <section id="experience" class="space-y-6" data-animate>
-        <div class="flex items-center justify-between gap-4">
-          <h2
-            class="font-heading text-xl font-semibold text-slate-50 md:text-2xl"
-          >
-            Work Experience
-          </h2>
-          <span
-            class="h-px flex-1 bg-linear-to-r from-primary/60 via-primary/20 to-transparent"
-          ></span>
-        </div>
-
-        <div class="space-y-5">
-          <!-- Cobold Digital -->
-          <article
-            class="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <div
-              class="pointer-events-none absolute inset-0 bg-linear-to-r from-primary/10 via-transparent to-transparent opacity-70"
-            ></div>
-            <div
-              class="relative flex flex-col gap-2 md:flex-row md:items-start"
-            >
-              <div class="md:flex-1">
-                <div class="flex items-center gap-2">
-                  <svg
-                    class="h-4 w-4 text-primary shrink-0"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <rect x="3" y="4" width="18" height="16" rx="2" />
-                    <path d="M3 10h18" />
-                  </svg>
-                  <h3 class="text-sm font-heading font-semibold text-slate-100">
-                    Software Engineer · Cobold Digital LLP
-                  </h3>
-                </div>
-                <p class="text-xs text-primary mt-0.5">
-                  2021 – 2022 · New Delhi, India (remote)
-                </p>
-                <p class="mt-2 text-slate-200">
-                  Implemented and maintained frontend modules for a CRM product
-                  built around the modern WhatsApp Cloud API, collaborating
-                  closely with cross-functional teams.
-                </p>
-              </div>
-            </div>
-            <ul class="relative mt-3 space-y-1 text-slate-200">
-              <li>
-                • Built modular frontend components for CRM workflows and
-                messaging features.
-              </li>
-              <li>
-                • Collaborated with backend engineers, occasionally contributing
-                to backend development.
-              </li>
-              <li>
-                • Took strong ownership over a React Native mobile app and its
-                codebase, ensuring stability and feature delivery.
-              </li>
-            </ul>
+            <div class="tag-list"><span>React</span><span>Node.js</span><span>AWS APIs</span><span>Legacy Migration</span><span>Refactoring</span></div>
+            <span class="private-note">Private client source</span>
           </article>
 
-          <!-- Mental arithmetic platform -->
-          <article
-            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <div class="flex items-center gap-2">
-              <svg
-                class="h-4 w-4 text-primary shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="3" y="4" width="18" height="16" rx="2" />
-                <path d="M7 9h10" />
-                <path d="M7 13h6" />
-              </svg>
-              <h3 class="text-sm font-heading font-semibold text-slate-100">
-                Full-Stack Developer · Educational Platform (Mental Arithmetics)
-              </h3>
+          <article class="project-card" data-reveal>
+            <div class="project-meta">
+              <span class="project-number">05</span>
+              <span class="project-state">Architecture</span>
             </div>
-            <p class="text-xs text-primary mt-0.5">2020 – ~2022</p>
-            <p class="mt-2 text-slate-200">
-              Developed a full educational platform for kids learning mental
-              arithmetic, taking responsibility for the entire product as a solo
-              full-stack developer.
+            <h3>GDPR-Conscious Exam Platform</h3>
+            <p class="project-subtitle">A full-stack quiz service for students preparing for German examinations.</p>
+            <p>
+              Integrated an external question provider and designed a Redis-backed, short-lived ingestion workflow
+              to minimize persistent storage while meeting strict privacy and retention requirements.
             </p>
-            <ul class="mt-3 space-y-1 text-slate-200">
-              <li>
-                • Designed and implemented frontend, backend, and data models.
-              </li>
-              <li>
-                • Focused on usability for children and instructors with
-                intuitive interfaces.
-              </li>
-              <li>
-                • Managed deployment, performance, and ongoing improvements.
-              </li>
-            </ul>
+            <div class="tag-list"><span>React</span><span>Vite</span><span>NestJS</span><span>Redis</span><span>REST APIs</span></div>
+            <span class="private-note">Private client source</span>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- PROJECTS -->
-      <section id="projects" class="space-y-6" data-animate>
-        <div class="flex items-center justify-between gap-4">
-          <h2
-            class="font-heading text-xl font-semibold text-slate-50 md:text-2xl"
-          >
-            What I’ve Built
-          </h2>
-          <span
-            class="h-px flex-1 bg-linear-to-r from-primary/60 via-primary/20 to-transparent"
-          ></span>
-        </div>
-
-        <div class="grid gap-5 md:grid-cols-2">
-          <!-- tmpl language -->
-          <article
-            class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <div
-              class="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"
-            ></div>
-            <div class="relative flex items-center gap-2 mb-1">
-              <svg
-                class="h-4 w-4 text-primary shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M16 18l6-6-6-6" />
-                <path d="M8 6l-6 6 6 6" />
-              </svg>
-              <h3 class="text-sm font-heading font-semibold text-slate-100">
-                tmpl – Custom Programming / Scripting Language
-              </h3>
-            </div>
-            <p
-              class="relative mb-2 text-[0.7rem] uppercase tracking-wide text-primary/80"
-            >
-              C++ · CMake · Native C-modules
-            </p>
-            <p class="relative text-slate-200">
-              Designed and implemented a custom programming/scripting language
-              in C++ with native module support similar to CPython or Node.js
-              addons, including CMake build configuration.
-            </p>
-          </article>
-
-          <!-- Chrome extension -->
-          <article
-            class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <div
-              class="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"
-            ></div>
-            <div class="relative flex items-center gap-2 mb-1">
-              <svg
-                class="h-4 w-4 text-primary shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <path d="M8 9h8" />
-              </svg>
-              <h3 class="text-sm font-heading font-semibold text-slate-100">
-                WhatsApp Chrome Extension – Groups & Chats Extractor
-              </h3>
-            </div>
-            <p
-              class="relative mb-2 text-[0.7rem] uppercase tracking-wide text-primary/80"
-            >
-              JavaScript · Browser APIs
-            </p>
-            <p class="relative text-slate-200">
-              Built a Chrome extension that can extract and process WhatsApp
-              group, contact, and chat data from the browser, enabling advanced
-              workflows and integrations.
-            </p>
-          </article>
-
-          <!-- Tauri gallery app -->
-          <article
-            class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <div
-              class="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"
-            ></div>
-            <div class="relative flex items-center gap-2 mb-1">
-              <svg
-                class="h-4 w-4 text-primary shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="3" y="4" width="18" height="14" rx="2" />
-                <circle cx="8.5" cy="11" r="2" />
-                <path d="M21 15l-3.5-4-3 3.5-2-2.5L7 17h14z" />
-              </svg>
-              <h3 class="text-sm font-heading font-semibold text-slate-100">
-                Native Desktop Photos & Gallery App
-              </h3>
-            </div>
-            <p
-              class="relative mb-2 text-[0.7rem] uppercase tracking-wide text-primary/80"
-            >
-              Tauri · Rust · React
-            </p>
-            <p class="relative text-slate-200">
-              Desktop application for managing photos and videos on external
-              drives, with a React-based frontend and Rust backend powered by
-              Tauri.
-            </p>
-          </article>
-
-          <!-- Telegram Mini App / ChatGPT Clone -->
-          <article
-            class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <div
-              class="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"
-            ></div>
-            <div class="relative flex items-center gap-2 mb-1">
-              <svg
-                class="h-4 w-4 text-primary shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M22 2L11 13" />
-                <path d="M22 2L15 22 11 13 2 9 22 2z" />
-              </svg>
-              <h3 class="text-sm font-heading font-semibold text-slate-100">
-                Telegram Mini App – ChatGPT-like Experience
-              </h3>
-            </div>
-            <p
-              class="relative mb-2 text-[0.7rem] uppercase tracking-wide text-primary/80"
-            >
-              Web · Telegram Mini Apps · OpenAI
-            </p>
-            <p class="relative text-slate-200">
-              A Telegram Mini App clone of ChatGPT with most core AI features,
-              providing conversational AI access inside the Telegram ecosystem.
-            </p>
-          </article>
-
-          <!-- Kahoot-like platform -->
-          <article
-            class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <div
-              class="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"
-            ></div>
-            <div class="relative flex items-center gap-2 mb-1">
-              <svg
-                class="h-4 w-4 text-primary shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="3" y="4" width="18" height="14" rx="2" />
-                <path d="M10 9h4" />
-                <path d="M9 13h6" />
-              </svg>
-              <h3 class="text-sm font-heading font-semibold text-slate-100">
-                Kahoot-like Web & Mobile Exam Prep Platform
-              </h3>
-            </div>
-            <p
-              class="relative mb-2 text-[0.7rem] uppercase tracking-wide text-primary/80"
-            >
-              React · React Native
-            </p>
-            <p class="relative text-slate-200">
-              Built a quiz platform for German students to prepare for real
-              exams, supporting custom question and answer sets across web and
-              mobile.
-            </p>
-          </article>
-
-          <!-- 3D Engine -->
-          <article
-            class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <div
-              class="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/15 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"
-            ></div>
-            <div class="relative flex items-center gap-2 mb-1">
-              <svg
-                class="h-4 w-4 text-primary shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6z" />
-                <path d="M5 6l7 4 7-4" />
-              </svg>
-              <h3 class="text-sm font-heading font-semibold text-slate-100">
-                Custom 3D OpenGL Game Engine
-              </h3>
-            </div>
-            <p
-              class="relative mb-2 text-[0.7rem] uppercase tracking-wide text-primary/80"
-            >
-              C++ · OpenGL · GLEW · CMake
-            </p>
-            <p class="relative text-slate-200">
-              Implemented a 3D engine with renderer, entity-component-system,
-              and Wavefront model loading, focusing on engine architecture and
-              performance.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- EDUCATION -->
-      <section id="education" class="space-y-6" data-animate>
-        <div class="flex items-center justify-between gap-4">
-          <h2
-            class="font-heading text-xl font-semibold text-slate-50 md:text-2xl"
-          >
-            Education (in Germany)
-          </h2>
-          <span
-            class="h-px flex-1 bg-linear-to-r from-primary/60 via-primary/20 to-transparent"
-          ></span>
-        </div>
-
-        <div class="space-y-4 text-xs md:text-sm">
-          <article
-            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <h3 class="text-sm font-heading font-semibold text-slate-100">
-              Erweiterter Realschulabschluss · Focus: Business & Administration
-            </h3>
-            <p class="text-xs text-primary">2024 – 2025 · Germany</p>
-          </article>
-
-          <article
-            class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-          >
-            <h3 class="text-sm font-heading font-semibold text-slate-100">
-              Abitur (in progress) · Focus: Information Technology
-            </h3>
-            <p class="text-xs text-primary">2025 – Present · Germany</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="space-y-6" data-animate>
-        <div class="flex items-center justify-between gap-4">
-          <h2
-            class="font-heading text-xl font-semibold text-slate-50 md:text-2xl"
-          >
-            Contact
-          </h2>
-          <span
-            class="h-px flex-1 bg-linear-to-r from-primary/60 via-primary/20 to-transparent"
-          ></span>
-        </div>
-
-        <div
-          class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-xs md:text-sm hover:-translate-y-1 hover:shadow-glow transition-transform duration-300"
-        >
-          <p class="mb-4 text-slate-200">
-            Open to roles in software engineering, full-stack development, and
-            projects that mix web, systems, and infrastructure.
+    <section class="section section-tinted" id="experience">
+      <div class="shell experience-layout">
+        <div class="experience-intro" data-reveal>
+          <p class="section-kicker">Experience</p>
+          <h2>Production ownership, not just feature delivery.</h2>
+          <p>
+            I have worked across product planning, architecture, implementation, client communication,
+            deployment, troubleshooting, and ongoing operations.
           </p>
+        </div>
 
-          <div class="grid gap-4 md:grid-cols-2">
-            <dl class="space-y-2 text-slate-200">
-              <div>
-                <dt class="flex items-center gap-1 text-slate-400">
-                  <svg
-                    class="h-3.5 w-3.5 text-primary"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M22 4.5V19.5C22 20.3284 21.3284 21 20.5 21H3.5C2.67157 21 2 20.3284 2 19.5V4.5"
-                    />
-                    <path
-                      d="M2 5L10.5858 12.2929C11.3668 12.9497 12.6332 12.9497 13.4142 12.2929L22 5"
-                    />
-                  </svg>
-                  Email
-                </dt>
-                <dd>
-                  <a
-                    href="mailto:adal.amir07@gmail.com"
-                    class="hover:text-primary"
-                    >adal.amir07@gmail.com</a
-                  >
-                </dd>
+        <div class="timeline">
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-date">Aug 2021 — Present</div>
+            <div class="timeline-content">
+              <div class="timeline-heading">
+                <h3>Independent Software Engineer</h3>
+                <span>Remote · International clients</span>
               </div>
-              <div>
-                <dt class="flex items-center gap-1 text-slate-400">
-                  <svg
-                    class="h-3.5 w-3.5 text-primary"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M22 16.92V21a1 1 0 0 1-1.09 1A19.79 19.79 0 0 1 3 5.09 1 1 0 0 1 4 4h4.09a1 1 0 0 1 1 .75l1.12 4.49a1 1 0 0 1-.54 1.14l-2.49 1.12a16 16 0 0 0 7.27 7.27l1.12-2.49a1 1 0 0 1 1.14-.54l4.49 1.12a1 1 0 0 1 .71.95z"
-                    />
-                  </svg>
-                  Phone
-                </dt>
-                <dd>+49&nbsp;173&nbsp;3942115</dd>
-              </div>
-              <div>
-                <dt class="flex items-center gap-1 text-slate-400">
-                  <svg
-                    class="h-3.5 w-3.5 text-primary"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  Location
-                </dt>
-                <dd>Saxony-Anhalt, Germany</dd>
-              </div>
-            </dl>
-
-            <div class="space-y-2">
-              <p class="text-slate-400">You can also add links here:</p>
-              <ul class="space-y-1 text-slate-200 text-xs">
-                <li class="flex items-center gap-2">
-                  <svg
-                    class="h-3.5 w-3.5 text-primary"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-                  </svg>
-                  <span class="font-semibold text-slate-100">GitHub:</span>
-                  <a href="https://github.com/LandaMm" target="_blank" class="text-primary">
-                    github.com/LandaMm
-                  </a>
-                </li>
-                <li class="flex items-center gap-2">
-                  <svg
-                    class="h-3.5 w-3.5 text-primary"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-                  </svg>
-                  <span class="font-semibold text-slate-100">Gitea Home Lab:</span>
-                  <a href="https://git.adalspace.com/admin" target="_blank" class="text-primary">
-                    git.adalspace.com/admin
-                  </a>
-                </li>
-                <li class="flex items-center gap-2">
-                  <svg
-                    class="h-3.5 w-3.5 text-primary"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M16 8a6 6 0 0 1-6 6H8v6H5V4h5a6 6 0 0 1 6 4z" />
-                  </svg>
-                  <span class="font-semibold text-slate-100">LinkedIn:</span>
-                  <a href="https://linkedin.com/in/amir-adal-043743241/" target="_blank" class="text-primary">
-                    linkedin.com/in/amir-adal-043743241/
-                  </a>
-                </li>
-                <li class="flex items-center gap-2">
-                  <svg
-                    class="h-3.5 w-3.5 text-primary"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M3 12h18" />
-                    <path d="M3 6h18" />
-                    <path d="M3 18h18" />
-                  </svg>
-                  <span class="font-semibold text-slate-100">Portfolio:</span>
-                  <a href="https://adalspace.com" target="_blank" class="text-primary">
-                    adalspace.com
-                  </a>
-                </li>
+              <p>
+                Delivered paid full-stack applications and infrastructure for education, certification,
+                blockchain product verification, cryptocurrency workflows, and AI products.
+              </p>
+              <ul>
+                <li>Owned projects from requirements and architecture through deployment and production support.</li>
+                <li>Designed React/Vite frontends, NestJS APIs, data models, authentication, integrations, and Redis workflows.</li>
+                <li>Modernized legacy software, resolved difficult compatibility issues, and advised clients on NestJS adoption.</li>
+                <li>Deployed services using Linux, Docker, Nginx, GitHub CI/CD, and Kubernetes-based workflows.</li>
               </ul>
             </div>
+          </article>
+
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-date">Jun 2022 — Jul 2023</div>
+            <div class="timeline-content">
+              <div class="timeline-heading">
+                <h3>Software Engineer</h3>
+                <span>Cobold Digital LLP · Remote</span>
+              </div>
+              <p>
+                Worked on a CRM and marketing platform built around the WhatsApp Cloud API,
+                progressing from frontend implementation into broader product and backend responsibilities.
+              </p>
+              <ul>
+                <li>Built React modules, Ant Design onboarding forms, chat interfaces, campaigns, and automation tools.</li>
+                <li>Designed a subscription-driven form-value mechanism that reduced unnecessary React updates in complex live-preview forms.</li>
+                <li>Contributed backend fixes, supported colleagues with Linux and development-environment issues, and improved internal tooling.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="section-kicker">Technical toolkit</p>
+            <h2>Depth where it matters, range where it helps.</h2>
+          </div>
+          <p>
+            My strongest areas are backend development, C++ systems work, Linux operations, and taking products through the full software lifecycle.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group" data-reveal>
+            <span class="skill-index">01</span>
+            <h3>Core languages</h3>
+            <p>C++, C, TypeScript, JavaScript, SQL, Bash</p>
+          </div>
+          <div class="skill-group" data-reveal>
+            <span class="skill-index">02</span>
+            <h3>Backend & data</h3>
+            <p>NestJS, Node.js, REST APIs, PostgreSQL, Redis, MongoDB, authentication, streaming</p>
+          </div>
+          <div class="skill-group" data-reveal>
+            <span class="skill-index">03</span>
+            <h3>Frontend</h3>
+            <p>React, Vite, React Native, HTML, CSS, Webpack, accessible responsive interfaces</p>
+          </div>
+          <div class="skill-group" data-reveal>
+            <span class="skill-index">04</span>
+            <h3>Infrastructure</h3>
+            <p>Linux, Ubuntu Server, Docker, Docker Compose, Portainer, Nginx, Cloudflare, GitHub Actions, Kubernetes</p>
+          </div>
+          <div class="skill-group" data-reveal>
+            <span class="skill-index">05</span>
+            <h3>Systems engineering</h3>
+            <p>Memory management, custom containers, parsers, interpreters, debugging, OpenGL, ECS architecture</p>
+          </div>
+          <div class="skill-group" data-reveal>
+            <span class="skill-index">06</span>
+            <h3>Integrations</h3>
+            <p>AWS Rekognition APIs, OpenAI, Telegram, WhatsApp Cloud API, payment providers, blockchain services</p>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="border-t border-slate-800/80 bg-bg-dark/90 py-6">
-      <div
-        class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 text-xs text-slate-500 md:flex-row"
-      >
-        <p>© <span id="year"></span> · Amir Adal · Software Engineer</p>
-        <p class="text-[0.7rem] text-slate-500">
-          Built with Tailwind CSS · Inter & Montserrat · Dark mode
-        </p>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section class="section homelab-section">
+      <div class="shell homelab-grid">
+        <div data-reveal>
+          <p class="section-kicker">Infrastructure in practice</p>
+          <h2>My homelab is also my production environment.</h2>
+        </div>
+        <div class="homelab-copy" data-reveal>
+          <p>
+            I converted an older desktop into a self-managed Ubuntu Server that hosts OpenGPT,
+            this portfolio, and a private Gitea instance. I manage container deployments with Docker and Portainer,
+            route traffic with Nginx, issue HTTPS certificates, expose services through port forwarding,
+            and update Cloudflare DNS automatically when my dynamic IPv4 address changes.
+          </p>
+          <div class="homelab-stack" aria-label="Homelab stack">
+            <span>Ubuntu Server</span><span>Docker</span><span>Portainer</span><span>Nginx</span><span>HTTPS</span><span>Cloudflare API</span><span>Gitea</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tinted" id="about">
+      <div class="shell about-grid">
+        <div class="about-photo" data-reveal>
+          <img src="./images/profile.jpg" alt="Amir Adal" />
+        </div>
+        <div class="about-copy" data-reveal>
+          <p class="section-kicker">About</p>
+          <h2>Curiosity led me from interfaces to internals.</h2>
+          <p>
+            I started programming with C++ as a child, later built commercial web products,
+            and eventually returned to low-level engineering because I wanted to understand what happens beneath frameworks and abstractions.
+          </p>
+          <p>
+            Today, I combine that systems mindset with practical product experience. I enjoy reading documentation,
+            tracing difficult bugs, improving architecture, and learning unfamiliar technologies deeply enough to use them responsibly.
+          </p>
+
+          <div class="about-facts">
+            <div><span>Education</span><strong>Abitur, Information Technology<br />Expected Summer 2028</strong></div>
+            <div><span>Languages</span><strong>Russian · German C1 · English</strong></div>
+            <div><span>Location</span><strong>Saxony-Anhalt, Germany</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="shell contact-inner" data-reveal>
+        <p class="section-kicker">Let’s build something dependable</p>
+        <h2>Looking for an engineer who can own the problem, not only the ticket?</h2>
+        <p>
+          I am open to software engineering opportunities in backend, systems, infrastructure,
+          and teams where technical curiosity and ownership are valued.
+        </p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:adal.amir07@gmail.com">Email Amir</a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/amir-adal-043743241/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="button button-secondary" href="https://github.com/adalspace" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© <span id="year"></span> Amir Adal</p>
+      <p>Software Engineer · Backend · Systems · Infrastructure</p>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" data-lightbox aria-label="Project image preview">
+    <button class="lightbox-close" type="button" aria-label="Close image preview" data-lightbox-close>×</button>
+    <figure>
+      <img src="" alt="" data-lightbox-image />
+      <figcaption data-lightbox-caption></figcaption>
+    </figure>
+  </dialog>
+</body>
 </html>
